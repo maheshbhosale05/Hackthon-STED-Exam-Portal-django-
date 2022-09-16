@@ -1,0 +1,289 @@
+{%extends 'layout.html' %}
+{% block content %}
+
+                    {% if msg %}
+                    <div class="alert alert-{{tag}}">{{msg}}</div>
+                    {% endif %}
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4" style="width: 1000px;" >
+            <div class="card" style="width: 1000px;margin-left: -300px; ">
+                <div class="card-header">
+                    <h3 style="text-align: center">Sikkim Teacher Eligibility Test</h3>
+                    <br>
+                    <h3 style="text-align: center">Application</h3>
+                </div>
+                <div class="card-body">
+                    <!-- form start -->
+                    <form action="{%url 'files'%}" method="POST">
+                                    {% csrf_token %}
+                            <div class="row">
+                                <div class="col">
+                                        <label ><h4>1.First Name</h4></label>
+                                        <input type="text" class="form-control" name="fname" id="fname" value="" required>
+                                </div>
+                                <div class="col">
+                                        <label ><h4>2.Last Name</h4></label>
+                                        <input type="text" class="form-control" name="lname" id="lname" placeholder="Last name" required>
+                                </div>  
+                            </div>
+                           
+                            <br>
+                            <div class="row">
+                                    <div class="col">
+                                            <label ><h4>3.Father's Name</h4></label>
+                                            <input type="text" class="form-control" name="father" id="father" placeholder="Father's Name" required>
+                                    </div>
+                                    <div class="col">
+                                            <label ><h4>4.Mother's Name</h4></label>
+                                            <input type="text" class="form-control" name="mother" id="mother" placeholder="mother's name" required>
+                                    </div>  
+                            </div>
+                            <br>
+                            <div class="row">
+                                    <div class="col">
+                                            <label ><h4>5.Date of Birth</h4></label>
+                                            <input type="date" class="form-control" name="bdate" id="bdate" placeholder="DD/MM/YY" required>
+                                    </div>
+                                    <div class="col">
+                                            <label ><h4>6.Mobile Number</h4></label>
+                                            <input type="text" class="form-control" name="mobile" id="mobile" placeholder=" mobile number" required>
+                                    </div>  
+                            </div>
+                            <br>
+                            <div class="col">
+                                    <label ><h4>7.Email Address</h4></label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder=" abc@gmail.com" required>
+                            </div> 
+                            <br>
+                            
+                            <div class="col">
+                                    <label ><h4>8.Address</h4></label>
+                                    <br>
+                                    <label >Street address</label>
+                                    <input type="address" class="form-control" name="sadd" id="sadd" placeholder=" Street Name" required>
+                                    <br>
+                                    <label >Place/Street address line-2  </label>
+                                    <input type="address" class="form-control" name="padd" id="padd" placeholder=" Place Name" required>
+                                    <br>
+                                    <div class="row">
+                                            <div class="col">
+                                                    <label >District</label>
+                                                    <input type="text" class="form-control" name="district" id="district" placeholder="district" required>
+                                            </div>
+                                            <div class="col">
+                                                    <label >State</label>
+                                                    <input type="text" class="form-control" name="state" id="state" placeholder=" state" required>
+                                            </div>  
+                                    </div>
+                            </div> 
+                            <br>
+                            <div class="row">
+                            
+                            <div class="col">
+                                    <label ><h4>9.Select Language For Exam</h4></label>
+                                    <select class="form-control" id="lang" name="lang">
+                                    <option>--Select Language--</option>
+                                    <option>Nepali</option>
+                                    <option>Bhutiya</option>
+                                    <option>Lepcha</option>
+                                    <option>Limboo</option>
+                                    <option>Hindi</option>
+                                    
+                                    </select>
+                                   
+                            </div>
+                            <div class="col">
+                                    <label ><h4>10.Cast details- Category</h4></label>
+                                    <input type="text" class="form-control" name="cast" id="cast" placeholder="Category" required>
+                            </div> 
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                    <div class="col">
+                                    </div>
+                                    <div class="col" >
+                                            <label style="width: 400px"><h4>11.Category Of Teacher For STET</h4></label>    
+                                            <input type="radio" name="Category" id="Category" value="Primary Teacher for Classes I to V "style="margin-left:2px">Primary Teacher for Classes I to V <br>
+                                            <input type="radio" name="Category" id="Category" value="GT Arts for classes VI to VIII " style="margin-left:2px">GT Arts for classes VI to VIII <br>
+                                            <input type="radio" name="Category" id="Category" value="GT Science/Maths for classes VI to VIII" style="margin-left:2px">GT Science/Maths for classes VI to VIII<br>
+                       
+                                    </div> 
+                                    <div class="col">
+                                    </div> 
+                            </div>
+                            <br>
+                            <label ><h4>12.SSC Details</h4></label>
+                                    <br>
+                            <div class="row">
+                                    
+                                    <div class="col">
+                                            <label >Name of Board</label>
+                                            <input type="text" class="form-control" name="sboard" id="sboard" placeholder="board name" required>
+                                    </div>
+                                    <div class="col">
+                                            <label >Year of Passing</label>
+                                            <input type="text" class="form-control" name="spassyear" id="spassyear" placeholder="Passing Year" required>
+                                    </div> 
+                                    <div class="col">
+                                            <label >Maximum Marks</label>
+                                            <input type="text" class="form-control" name="sscmark" id="sscmark" placeholder="Maximum mark" required>
+                                    </div>
+                                    <div class="col">
+                                            <label >Mark Obtained</label>
+                                            <input type="text" class="form-control" name="sscmarkobt" id="sscmarkobt" placeholder=" Mark Obtained" required>
+                                    </div> 
+                                    <div class="col">
+                                            <label >Percentage</label>
+                                            <input type="text" class="form-control" name="spercentage" id="spercentage" placeholder=" Mark Obtained" required>
+                                    </div> 
+                            </div>
+                            <br>
+                            <label ><h4>13.HSC Details</h4></label>
+                                    <br>
+                            <div class="row">
+                                    
+                                    <div class="col">
+                                            <label >Name of Board</label>
+                                            <input type="text" class="form-control" name="hboard" id="hboard" placeholder="board name" required>
+                                    </div>
+                                    <div class="col">
+                                            <label >Year of Passing</label>
+                                            <input type="text" class="form-control" name="hpassyear" id="hpassyear" placeholder="Passing Year" required>
+                                    </div> 
+                                    <div class="col">
+                                            <label >Maximum Marks</label>
+                                            <input type="text" class="form-control" name="hscmark" id="hscmark" placeholder="Maximum mark" required>
+                                    </div>
+                                    <div class="col">
+                                            <label >Mark Obtained</label>
+                                            <input type="text" class="form-control" name="hscmarkobt" id="hscmarkobt" placeholder=" Mark Obtained" required>
+                                    </div> 
+                                    <div class="col">
+                                            <label >Percentage</label>
+                                            <input type="text" class="form-control" name="hpercentage" id="hpercentage" placeholder=" Mark Obtained" required>
+                                    </div> 
+                            </div>
+
+                            <br>
+                            <label ><h4>14.Graduation Details</h4></label>
+                                    <br>
+                            <div class="row">
+                                    
+                                    <div class="col">
+                                            <label >Name of Board</label>
+                                            <input type="text" class="form-control" name="gboard" id="gboard" placeholder="board name" required>
+                                    </div>
+                                    <div class="col">
+                                            <label >Year of Passing</label>
+                                            <input type="text" class="form-control" name="gpassyear" id="gpassyear" placeholder="Passing Year" required>
+                                    </div> 
+                                    <div class="col">
+                                            <label >Maximum Marks</label>
+                                            <input type="text" class="form-control" name="gmark" id="gmark" placeholder="Maximum mark" required>
+                                    </div>
+                                    <div class="col">
+                                            <label >Mark Obtained</label>
+                                            <input type="text" class="form-control" name="gmarkobt" id="gmarkobt" placeholder="Mark Obtained" required>
+                                    </div> 
+                                    <div class="col">
+                                            <label >Percentage</label>
+                                            <input type="text" class="form-control" name="gpercentage" id="gpercentage" placeholder="Mark Obtained" required>
+                                    </div> 
+                            </div>
+
+                            <br>
+                            <!-- <label ><h4>15.Upload Recent Passport Size Photograph</h4></label>
+                            <input type="file" class="form-control" name="photo" id="photo" placeholder="Upload here" required>
+                                   
+
+                            <br>
+                            <label ><h4>16.Upload SSC marksheet</h4></label>
+                            <input type="file" class="form-control" name="sscmarkimg" id="sscmarkimg" placeholder="Upload here" required>
+                            <br>
+                            <label ><h4>17.Upload HSC marksheet</h4></label>
+                            <input type="file" class="form-control" name="hscmarkimg" id="hscmarkimg" placeholder="Upload here" required>
+                              -->
+
+                            <br>
+
+                            <div class="row">
+                                    
+                                    <div class="col" >
+                                            <label style="width: 400px"><h4>18.Are you orthopedically/Locomotor impaired?</h4></label> <br>   
+                                            <input type="radio" name="ortho" id="ortho" value="Primary Teacher for Classes I to V "style="margin-left:2px">     Yes <br>
+                                            <input type="radio" name="ortho" id="ortho" value="GT Arts for classes VI to VIII " style="margin-left:2px">    No <br>
+                       
+                                    </div> 
+                                    <div class="col">
+                                            <div class="col" >
+                                                    <label style="width: 400px"><h4>19. Have you appeared for STET earlier ?</h4></label> <br>   
+                                                    <input type="radio" name="previousapp" id="previousspp" value="Primary Teacher for Classes I to V "style="margin-left:2px">     Yes <br>
+                                                    <input type="radio" name="previousapp" id="previousapp" value="GT Arts for classes VI to VIII " style="margin-left:2px">    No <br>
+                               
+                                            </div>  
+                                    </div> 
+                            </div>
+
+                            <br><br>
+                            <p><h5>I agree & undertake that...</h5></p><br>
+                            <p class="text-justify">(i) The information submitted above is true and correct to the best of my Knowledge.I understand that ,In case any Information proves to be false or incorrect or incomplete,my candidature will be cancelled .</p>
+                            <br>
+                            <p class="text-justify">
+                                    (ii) I understand that qualifying STET does not confer any right to claim for the job of teacher whether regular or adhoc.
+                                    It is one among the eligibility criteria for applying for teaching job.</p>
+                            <br>
+                            <p class="text-justify">iii) I didnot round-off the percentage on my Educational Qualification (as in S.No.10 in this form),and I entered as it is with decimals(2 digits). If I ignore this ,and round off then my candidature will be automatically rejected by the processing system,ONLY ELIGIBLE CANDIDATES WILL RECIEVE THE ADMIT CARD.</p>
+
+                            <br class="text-justify">
+                            <p>(iv) I completed my Teaching Degree/Diploma (B.Ed/D.El.Ed...) as a regular Student by attending classes in an NCTE approved Institution or through NCTE approved Distance mode.</p>
+
+
+
+
+
+
+
+
+
+                            <br><br>
+
+                            <div class="form-group" >
+                                    <button type="submit" class="btn btn-success"style="align: center">Submit and Go for Payment</button>
+                                </div> 
+                            
+
+<br><br>
+                          
+                            
+
+
+                        </form>
+
+
+
+                        <!-- form ens -->
+
+                </div>
+            </div>
+
+        </div>
+        <br><br>
+        <div class="col-md-4">
+
+        </div>
+
+
+    </div>
+</div>
+<br><br>
+
+
+
+
+
+{% endblock %}

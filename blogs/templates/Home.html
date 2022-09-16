@@ -1,0 +1,105 @@
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul> <div style="margin-left:-7rem;">
+                <ul class="list-group">
+                    <li class="list-group-item " style="background-color:rgb(231, 102, 26);">Notifications</li>
+                    <li class="list-group-item"><a href="#" style="color: black;">Latest Notifications</a></li>
+                    <li class="list-group-item"><a href="#" style="color: black;">Upcoming Notifications</a></li>
+                    <li class="list-group-item"><a href="#" style="color: black;">Examwise Information</a></li>
+                    <li class="list-group-item"><a href="#" style="color: black;">Notification Status</a></li>
+                  </ul>
+                </div>
+                <div style="margin-left:-7rem;">
+                <br >
+                  <ul class="list-group">
+                    <li class="list-group-item " style="background-color:rgb(231, 102, 26);">Latest Announcements</li>
+                    <li class="list-group-item"><a href="#" style="color: black;">Admit Card</a></li>
+                    <li class="list-group-item"><a href="#" style="color: black;">Exam Date</a></li>
+                    <li class="list-group-item"><a href="#" style="color: black;">Answer Key</a></li>
+                    <li class="list-group-item"><a href="#" style="color: black;">Cutoff Marks</a></li>
+                    <li class="list-group-item"><a href="#" style="color: black;">Written Marks</a></li>
+                    <li class="list-group-item"><a href="#" style="color: black;"> Interview Results    </a></li>
+                  </ul>
+                </div>
+
+                    <ul class="list-group">
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <table style="width: 550px;" border="2">
+                <tbody>
+                <tr>
+                <td colspan="2">
+                <p style="text-align: center;"><span style="color: #ff0000;"><strong>Sikkim Eligibility Test</strong></span></p>
+                <p style="text-align: center;"><span style="color: #ff00ff;"><strong>Advt No </strong></span></p>
+                <p style="text-align: center;"><span style="color: #008000;"><strong>Sikkim TET </strong></span></p>
+                <p style="text-align: center;"><strong><a href="" target="_blank">WWW.STET.COM</a></strong></p>
+                </td>
+                </tr>
+                <tr>
+                <td style="text-align: center;" colspan="2"><span style="color: #ff0000;"><strong>Application Fee</strong></span></p>
+                <ul>
+                    <li>For General/ OBC – Rs 600/- (Single Paper) & Rs 1200/- (Two Papers)</li>
+                    <li style="margin-right:7.8rem;">For Scheduled Caste (SC)/ Scheduled Tribe (ST) – Rs 400/- (Single Paper) & Rs 800/- (Two Papers)</li>
+                    <li>with Disability – Rs 100/- (Single Paper) & Rs 200/- (Two Papers)</li>
+                </ul>
+                </td>
+                </tr>
+                <tr>
+                <td style="text-align: center;" colspan="2"><span style="color: #ff0000;"><strong><strong>Important Dates</strong></strong></span></p>
+                <ul>
+                <li style="text-align: left;">Starting Date to Apply Online: <strong></strong></li>
+                <li style="text-align: left;">Last Date to Apply Online: <strong><span style="color: #993300;"></span></strong></li>
+                <li style="text-align: left;"><span style="color: #000000;">Date for Submission of Printed Copy of the Application: <strong></strong></span></li>
+                <li style="text-align: left;"><span style="color: #000000;">Date for E-Mail of Admit Cards:<strong> </strong></span><strong>On wards</strong></li>
+                <li style="text-align: left;">Date of Exam: <strong><span style="color: #993300;">(Exam Postponed)</span></strong></li>
+                </ul>
+                </td>
+                </tr>
+                <tr>
+                <td style="text-align: center;" colspan="2"><span style="color: #ff0000;"> <strong>Vacancy Details</strong> </span></td>
+                </tr>
+                <tr>
+                <td style="text-align: center;"><span style="color: #ff00ff;"><strong>Post Name</strong></span></td>
+                <td style="text-align: center;"><span style="color: #ff00ff;"><strong><strong>Qualification</strong></strong></span></td>
+                </tr>
+                <tr>
+                <td style="text-align: center;">Sikkim TET-2019</td>
+                <td style="text-align: justify;">Sr Secondary/ B.A/ B.Sc, D.El.Ed, B.El.Ed, B.Sc.Ed/ B.A.Ed</td>
+                </tr>
+                <tr>
+                <td style="text-align: center;" colspan="2"><span style="color: #0000ff;"> <strong><a href="{% url 'rules' %}">Interested Candidates Can Read the Full Notification Before Apply Online click here</a></strong></span></td>
+                </tr>
+                </tbody>
+                </table>
+
+        </div>
+        <div class="col-md-3">
+            <h2 style="color: rgb(231, 102, 26);">Brief Information:</h2>
+            <article>Human Resource Development Dept, Sikkim has published notification for conducting Sikkim Teacher Eligibility Test (Sikkim TET) to select Teachers for Classes I-V (Primary Level), Classes VI-VIII (Elementary Level). Those Candidates who are interested in the vacancy details & completed all eligibility criteria can read the Notification & Apply Online.</article>
+            <br>
+            <br> 
+            <br>
+            <h2 style="color: rgb(231, 102, 26);">Advertisements:</h2>
+            <ul>
+                <ul><li>JOB NOTIFICATIONS</li></ul>
+                <ul><li>STATE JOB NOTIFICATIONS</li></ul>
+                <ul><li>ADMIT CARDS</li></ul>
+                <ul><li>RESULTS</li></ul>
+                <ul><li>ANSWER KEYS</li></ul>
+                <ul><li>SYLLABUS</li></ul>
+                
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+<br>
+{% endblock %}

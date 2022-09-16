@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+
+            <div class="card border-dark mb-3" style="margin-top: 50px; width: 500px;">
+                <div class="card-header">Query</div>
+                <div class="card-body text-dark">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Name</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                          </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                          <label for="querydescription">Query Description</label>
+                          <br/><br/>
+                          <textarea name="querydescription" form="usrform" style="width:308px;height:100px; " placeholder="Enter query here">Enter query  here...</textarea>
+                          
+                        </div>
+                        
+                        <div style="align-self: center;"><button type="submit" class="btn btn-primary"  style="background-color:rgb(86, 180, 209);margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%">
+                            Submit Query</button></div>
+                    </form>
+                  
+                </div>
+              </div>
+            
+
+        </div>
+        <div class="col-md-3">
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

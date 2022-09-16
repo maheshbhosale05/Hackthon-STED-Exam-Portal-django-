@@ -1,0 +1,197 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="container">
+            
+            <br>
+        <div class="card border-dark mb-3" style="max-width: 25rem;max-height: 30rem; " >
+            <div class="card-header"style="text-align:center;background-color:rgb(231, 102, 26);"  ><h2>Notice </h2></div>
+            <div class="card-body text-dark">
+                <marquee behavior="scroll" direction="up" scrollamount="2" height="250"
+                 onmouseover="this.setAttribute('scrollamount',0,0);this.stop()"
+                 onmouseout="this.setAttribute('scrollamount',2,0);this.start()"
+                 class="moving_body" >
+                    <p class="card-text" style="text-align:center;">
+                        <table class="table table-striped" style="height:30%;;">
+                            <tbody>
+                                <tr>    
+                                    <td ><a href="#">Exam Postponed</a></td>     
+                                </tr> 
+                                <tr>    
+                                    <td ><a href="#">New Exam Date & Admit Card</a>
+                                    </td>    
+                                </tr>
+                                <tr>    
+                                    <td><a href="#">Exam Date Postponed Notice</a>
+                                    </td>
+                                <tr>          
+                                <td><a href="#">Applyn Online</a>
+                                            </td>    
+                                </tr>
+                                <tr>
+                                        <td><a href="#">Eligibility Criteria</a>
+                                            </td>    
+                                </tr>
+                                <tr>
+                                        <td><a href="#">Exam Pattern</a>
+                                            </td>    
+                                </tr>
+                                <tr>
+                                        <td><a href="#">Notification</a>
+                                        </td>          
+                                </tr>
+                                <tr>         
+                                        <td><a href="#">Official Website</a>
+                                        </td>    
+                                </tr>
+    
+                             </tbody>
+                        </table>
+                    </p>
+                 </marquee>
+            </div>
+            
+                <div class="card-footer text-muted" style="text-align:right;background-color:rgb(231, 102, 26);">
+                    <a href="{% url 'table' %}" style="color:black;">view all</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+     
+        
+    
+    
+            <div class="col-md-6">
+                <div class="container">
+                      <br>
+                      <div class="card-group">
+                        <div class="card">
+                            <div class="card-header" style="text-align: center;background-color:rgb(231, 102, 26);">
+                                <h2  >IMPORTANT NOTES</h2>
+                            </div>
+                          <div class="card-body">
+                            
+                            <p class="card-text">
+                                <p><h3>1. The candidate applying for CTET is required:</h3>
+                                i) To go through the Information Bulletin carefully with the entire requirement therein. <br>
+                                ii) To satisfy eligibility to appear in the examination.<br>
+                                iii) To submit On-line application by giving full particulars by accessing the CTET official website
+                                www.ctet.nic.in.<br>
+                                iv) To write complete mailing address with Postal PIN Code at the time of applying.<br>
+                                v) Before submission of application form, decide the mode of payment of fee.<br>
+                                vi) To keep the Confirmation Page along with the original copy of E-Challan (In case fee is paid
+                                through E-Challan) of Syndicate Bank or Canara Bank for future reference.<br>
+                                vii) If a candidate submits on-line more than one application, his/her candidature shall be liable
+                                to be cancelled and the candidate may also be debarred for future examination(s). No
+                                communication will be sent in this regard. <br></p>
+                                <p><h3>2. Method of Submission of Online Application Form:</h3>
+                                    STEP1:  Log on to CTET official website www.ctet.nic.in.<br>
+                                    STEP2: Go to the link “Apply Online” and open the same.<br>
+                                    STEP3: Fill in the Online Application Form and note down Registration No./Application No.<br>
+                                    STEP4: Upload Scanned Images of latest Photograph and Signature<br>
+                                    STEP5: Pay Examination Fee by e-challan or debit/credit card and net banking<br>
+                                    STEP6: Print Confirmation page for record and future reference. <br></p>
+                                <p>
+                                    <h3>3. Registration Procedure: </h3>
+                                    <h5>(a) Authentication Form: </h5>
+                                    Fill details like State, Identification type (select any Identity as applicable),
+                                    Candidate’s Name, and Date of Birth and Gender<br>
+                                    <h5> (b) Fill Online Application Form:</h5>
+                                    Fill complete online Application Form and choose password. After
+                                    submission, a Registration Number/Application Number gets generated. Note down the
+                                    Registration No./Application No. For subsequent login, system generated Registration No.
+                                    /Application No. and chosen Password will be used. <br>•Password Policy will be as follows:<br>
+                                    1. Password must be 8 to 13 characters long.<br>
+                                    2. Password must have at least one Upper case, one lower case alphabet and one numeric
+                                    value and at least one special characters!@#$%^&*-<br>
+                                    3. Candidate can change the passwords after login, if desired. New Password cannot be
+                                    identical to any of the previous three passwords. •Candidate is advised not to disclose or share the password with anybody. Neither CTETnor NIC
+                                    will be responsible for violation or misuse of the password of a candidate. •Candidate should log out at the end of their session so that the contents of the application
+                                    cannot be tampered by unauthorized persons. <br>
+                                    <h5>(c) Online Uploading of Scanned Images: </h5>
+                                    •Uploading of scanned Photo and Signature are mandatory.<br>
+                                     •Upload scanned photograph and signature in JPG/JPEG format.<br>
+                                     •Size of scanned photograph should be between 10 to 100 KB<br>
+                                    •Image Dimension of photograph should be 3.5 cm (width) x 4.5 cm (height).<br>
+                                     •Size of scanned signature should be between 3 to 30 KB. <br>
+                                     •Image Dimension of signature should be 3.5 cm (length) x 1.5 cm (height).<br>
+                                    The candidates are advised to keep the scanned images of latest photograph and signature of the
+                                    candidates ready in JPG format and as per the size and dimension specified, before applying
+                                    online.<br>
+                                    The scanned image of latest photograph is required to upload to avoid the inconvenience at
+                                    centre, as this photograph will be matched with the actual candidate appearing in the examination.<br>
+                                    <h5>(d) Pay Examination Fee:<br>
+                                        Fee Details for CTET - December, 2019 are as follows: </h5>
+                                        <table class="table table-bordered">
+                                            <tr>
+                                              <th>CATEGORY</th>
+                                              <th>Only Paper - I or II </th>
+                                              <th>Both Paper - I & II</th>
+                                            </tr>
+                                            <tr>
+                                              <td>General/OBC (NCL)</td>
+                                              <td>Rs.700/-</td>
+                                              <td>Rs.1200/- </td>
+                                            </tr>
+                                            <tr>
+                                              <td>SC/ST/Diff. Abled Person </td>
+                                              <td>Rs.350/-/</td>
+                                              <td>Rs.350/- </td>
+                                            </tr>
+                                          </table>
+                                    <h5>(e) Downloading of Confirmation Page:</h5>
+                                         Candidates are required to take printout of Confirmation Page for record and keep it for their
+                                         reference. The Confirmation Page is not required to be sent to CTET Unit.
+                                </p>
+                            </p>          
+                          </div>
+                        </div>
+                </div> 
+            </div>
+            </div>
+            <div class="col-md-3">
+                <div class="container">
+                    <br>
+                    <div class="card border-dark mb-3" style="max-width: 25rem;" >
+                        <div class="card-header"style="text-align:center;background:rgb(231, 102, 26);"><h2>News</h2></div>
+                        <div class="card-body text-dark">
+                            <marquee behavior="scroll" direction="up" scrollamount="2" height="250"
+                             onmouseover="this.setAttribute('scrollamount',0,0);this.stop()"
+                             onmouseout="this.setAttribute('scrollamount',2,0);this.start()"
+                             class="moving_body">
+                                <p class="card-text" style="text-align:center;">
+                                    <table class="table table-striped">
+                                        <tbody>
+                                            <tr>  
+                                                <td ><a href="#">mahesh</a></td>
+                                            </tr> 
+                                            <tr>   
+                                                <td ><a href="#">rohit</a>
+                                            </td>    
+                                            </tr> <tr>
+                                                <td><a href="#">shantanu</a>
+                                                </td>
+                                            <tr>
+                                                    
+                                                <td><a href="#">dipak</a>
+                                                        </td>
+                                                    
+                                                  </tr>
+                                              </tr>
+                                        </tbody>
+                                        </table>
+                                     </p>
+                                </marquee>
+                            </div>
+                            <div class="card-footer text-muted" style="text-align:right;background-color:rgb(231, 102, 26);">
+                                <a href="#" style="color:black;">view all</a>
+                              </div>
+                            </div>
+                    </div>
+            </div>
+        </div>
+</div>
+<br><br>
+{% endblock %}

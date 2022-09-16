@@ -1,0 +1,121 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container" >
+    <div class="row">
+        <div class="col-md-4">
+                    
+
+        </div>
+        <div class="col-md-4" style="width: 1000px;" >
+            <div class="card" style="width: 1000px;margin-left: -300px; ">
+                <div class="card-header">
+                    <h3 style="text-align: center">Sikkim Teacher Eligibility Test</h3>
+                    <br>
+                    <h3 style="text-align: center">Document Uploadation</h3>
+                    
+
+                </div>
+                <div class="card-body">
+                    <!-- form start -->
+                    <form  method="POST" enctype="multipart/form-data" >
+                      {% csrf_token %}
+
+                           
+                          
+                        <div class="row">
+                            <div class="col">
+                                <label ><h4>1.Photograph</h4></label>
+                                <input type="file" class="form-control" style="width: 450px" name="document" id="document" placeholder="Upload file" required>
+                        </div>
+                            <div class="col">
+                                <br><br>
+                                   
+                                    <button type="submit" style="margin-left: 20px ;background-color:rgb(231, 102, 26); color: white;" value="upload File"  class="btn"  >Submit</button>
+                            </div> 
+                            <div class="col">
+                                <br><br>
+                                   
+                                {% if msg %}
+                                <div style="margin-left: -100px" class="alert alert-{{tag}}">{{msg}}</div>
+                                {% endif %}
+                            </div> 
+                        </div>
+
+                       
+                        <br> 
+                         
+                  </form>
+                    <form  method="POST" enctype="multipart/form-data" >
+                      {% csrf_token %}
+
+                           
+                          
+                        <div class="row">
+                            <div class="col">
+                                    <label ><h4>2.SSC Certificate</h4></label>
+                                    <input type="file" class="form-control " style="width: 450px" name="document" id="document" placeholder="upload file" required>
+                            </div>
+                            <div class="col">
+                                <br><br>
+                                <button type="submit" value="upload File" style="margin-left: 20px;background-color:rgb(231, 102, 26); color: white;"  class="btn"  >Submit</button>
+                            </div>
+                            <div class="col">
+                                <br><br>
+                                   
+                                {% if msg %}
+                                <div style="margin-left: -100px" class="alert alert-{{tag}}">{{msg}}</div>
+                                {% endif %}
+                            </div> 
+                            
+
+                        </div>
+
+                       
+                        <br> 
+                         
+                  </form>
+                 
+                  <form method="POST" enctype="multipart/form-data" >
+                    {% csrf_token %}    
+                      <div class="row">
+                          <div class="col">
+                              <label ><h4>3.HSC Certificate</h4></label>
+                              <input type="file" class="form-control" style="width: 450px" name="document" id="document" placeholder="Upload file" required>
+                      </div>
+                          <div class="col">
+                              <br><br>
+                                 
+                                  <button type="submit" value="upload File" style="margin-left: 20px;background-color:rgb(231, 102, 26); color: white;"  class="btn" >Submit</button>
+                          </div>  
+                          <div class="col">
+                              <br><br>
+                              {% if msg %}
+                              <div style="margin-left: -100px" class="alert alert-{{tag}}">{{msg}}</div>
+                              {% endif %}
+                          </div> 
+                      </div>    
+                      <br> 
+                      <div>
+                        <button type="submit" value="upload File" style="background-color:rgb(231, 102, 26);"  class="btn" ><a href="https://www.onlinesbi.com/sbicollect/icollecthome.htm" style="color: white;">make peyment to submit application</a></button>
+                      </div>
+                </form>
+                        <!-- form ens -->
+
+                </div>
+                <div class="card-footer">
+                        <h5>Powered by Sikkim Government | All rights are Reserved | 2020</h5>
+
+                </div>
+            </div>
+
+        </div>
+        <br><br>
+        <div class="col-md-4">
+
+        </div>
+
+
+    </div>
+</div>
+<br><br>
+{% endblock %}

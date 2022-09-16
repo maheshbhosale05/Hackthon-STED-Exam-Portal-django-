@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/jquery.slim.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+</head>
+<body>
+    <!-- Header start-->
+    <div style="background-color:#d5382e;">
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="../../static/images/Seal_of_Sikkim_greyscale.png" alt="" style="width:160px;margin-left: 20px;">
+                </div>
+                <div class="col-md-2">
+    
+                </div>
+                <div class="col-md-6">
+                    <br><br>
+                    <h2>State Teacher Eligibility Test</h2>
+                </div>
+                <div class="col-md-2">
+                    <img src="../../static/images/Seal_of_Sikkim_greyscale.png" alt="" style="width:160px;margin-left: 20px;">
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    <!--Navbar-->
+    <div style="background-color: rgb(231, 102, 26);"> 
+        <div class="container">
+            <div class="row">
+                <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+                <!-- Navbar brand -->
+                <h5><a class="navbar-brand" href="{% url 'Home' %}" style="margin-left: -4rem;">SSTET</a><h5>
+            
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+            
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'Home' %}">HOME
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"href="{% url 'Eligibility' %}"style="color: white;">ELIGIBILITY</a>
+                    </li>
+                        <li class="nav-item">
+                         <a class="nav-link" href="{% url 'syllabus' %}" style="color: white;">SYLLABUS</a>
+                        </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'application' %}" style="color: white;">APPLY ONLINE</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'alluser' %}" style="color: white;">Users</a>
+                    </li>
+                    <!-- Dropdown -->
+                </ul>
+                <!-- Links -->
+                  
+                
+                <!-- <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'login' %}" style="color: black; margin-left:15rem;">LOGIN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'signup' %}" style="color: black; margin-right:-3rem;">SIGNUP</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'signup' %}" style="color: black; margin-right:-6rem;margin-left:-3.5rem;">PROFILE</a>
+                    </li>
+                  </ul> -->
+                  {% if request.session.user_email %}
+                    <ul class="nav"> 
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'profile' %}" style="color: white; margin-left:26rem;">Profile</a>
+                        </li> 
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}" style="color: white;margin-right:-4rem;">Logout</a>
+                      </li> 
+                    </ul>
+                    {% else %}
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'login' %}" style="color: white; margin-left:26rem;">Login</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'signup' %}" style="color: white;margin-right:-3rem;">Signup</a>
+                        </li> 
+                    </ul>
+                    {% endif%}
+            </div>
+            </nav>
+            </div>
+
+        </div>
+    </div> 
+    <!-- Header End -->
+    <!-- Body start-->
+    <br><br>
+    {% block content %}
+
+    {% endblock %}
+    <!-- Body End -->
+    <!-- Footer Start -->
+                    <!-- Footer -->
+<div>
+<div style="background-color:#d5382e;">
+<footer class="page-footer font-small unique-color-dark">
+
+    <div style="background-color: rgb(231, 102, 26);">
+      <div class="container">
+  
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0" style="margin-left:-4.5rem;">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right margin-right=-10rem;">
+  
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+  
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row-->
+  
+      </div>
+    </div>
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+  
+      <!-- Grid row -->
+      <div class="row mt-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+  
+          <!-- Content -->
+          <!-- <h6 class="text-uppercase font-weight-bold">Company name</h6> -->
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Other</h6>
+          <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!"style="color: black;"></a>
+          </p>
+          <p>
+            <a href="{% url 'Eligibility' %}"style="color: black;">Eligibility</a>
+          </p>
+          <p>
+            <a href="{% url 'exampatter' %}"style="color: black;">Examp Pattern</a>
+          </p>
+          <p>
+            <a href="#!"style="color: black;">Selection Process</a>
+          </p>
+
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!" style="color: black;">Your Account</a>
+          </p>
+          <p>
+            <a href="{% url 'syllabus' %}" style="color: black;">Syllabus</a>
+          </p>
+          <p>
+            <a href="{% url 'faqs' %}"style="color: black;">FAQ'S</a>
+          </p>
+          <p>
+            <a href="{% url 'report' %}"style="color: black;">Report</a>
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i><a href="{% url 'Home' %}">Home</a></p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> stet01@gmail.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> +985513542</p>
+          <p>
+            <i class="fas fa-print mr-3"></i> +985513542</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+    <!-- Footer Links -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Powered by Sikkim Government | All rights are Reserved | 2020
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+    <!-- Footer End -->
+</div>
+</div>
+</body>
+</html>
